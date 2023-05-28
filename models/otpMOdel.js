@@ -1,10 +1,14 @@
-const express = require("express");
-const { sentMailWithOtp, verifyOtp } = require("../controllers/userControllers");
-const router = express.Router();
-
-router.route("/create").post(sentMailWithOtp)
-
-router.route("/verifyOtp").post(verifyOtp)
+const mongoose = require("mongoose");
 
 
-module.exports = router;
+const userSchema = new mongoose.Schema({
+    email:{
+        type:String,
+
+    },
+    otp:{
+        type:String,
+    }
+})
+
+module.exports = mongoose.model("User",userSchema);
