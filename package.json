@@ -8,11 +8,15 @@
     "nodemailer": "^6.9.2",
     "otp-generator": "^4.0.1"
   },
+  "engines":{
+    "node":">=14 <15"
+  },
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
   },
   "keywords": [],
   "author": "",
